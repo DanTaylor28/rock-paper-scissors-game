@@ -63,3 +63,16 @@ body {
     padding: 20px;
     font-size: 35px;
 }
+
+.choices {
+    border: 5px solid #403F3C;
+    border-radius: 50%;
+    padding: 20px;
+    background: none;
+    margin: 0 30px
+}
+
+.images {
+    height: 120px;
+    width: 120px;
+}
