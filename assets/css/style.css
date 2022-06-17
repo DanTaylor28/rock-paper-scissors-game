@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: white;
+}
+
+.title {
+    margin: 20px 0;
+    font-size: 50px;
+    color: #403F3C;
+}
+
+.intro {
+    font-size: 25px;
+    margin: 50px auto;
+    border: invisible;
+    width: 1200px;
+    padding: 20px;
+    background-color: tan;
+    color: #403F3C;
+    
+}
