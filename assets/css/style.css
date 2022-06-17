@@ -13,6 +13,11 @@ body {
     font-size: 25px;
 }
 
+button {
+    background: none;
+    border: none; 
+} 
+
 .title {
     margin: 20px 0;
     font-size: 50px;
@@ -75,4 +80,14 @@ body {
 .images {
     height: 120px;
     width: 120px;
+}
+
+#reset-button {
+    margin-top: 80px;
+    font-size: 20px;
+    border: invisible;
+    border-radius: 5px;
+    background-color: #403F3C;
+    color: white;
+    padding: 5px;
 }
