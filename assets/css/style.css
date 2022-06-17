@@ -10,6 +10,7 @@
 
 body {
     background-color: white;
+    font-size: 25px;
 }
 
 .title {
@@ -19,12 +20,46 @@ body {
 }
 
 .intro {
-    font-size: 25px;
+    font-size: inherit;
     margin: 50px auto;
     border: invisible;
-    width: 1200px;
+    width: 1000px;
     padding: 20px;
-    background-color: tan;
-    color: #403F3C;
-    
+    background-color: #403F3C;
+    color: white;
+}
+
+.score-area {
+    width: 400px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+#your-score {
+    position: relative;
+    right: 48%;
+    border: invisible;
+    border-radius: 5px;
+    background-color: #403F3C;
+    color: white;
+    padding: 5px;
+}
+
+#comp-score {
+    position: relative;
+    left: 65%;
+    border: invisible;
+    border-radius: 5px;
+    background-color: #403F3C;
+    color: white;
+    padding: 5px;
+}
+
+#score-tally {
+    border: invisible;
+    background-color: #d0312d;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 35px;
 }
