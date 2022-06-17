@@ -30,13 +30,15 @@ button {
     border: invisible;
     width: 1000px;
     padding: 20px;
-    background-color: #403F3C;
-    color: white;
+    background-color: #ede9e7;
+    color: #403F3C;
 }
+
+/* Score area styling */
 
 .score-area {
     width: 400px;
-    margin: 60px auto;
+    margin: 50px auto;
     padding: 20px;
 }
 
@@ -69,12 +71,27 @@ button {
     font-size: 35px;
 }
 
+/* Game area styling */
+
+.game-area {
+    background-color: #ede9e7;
+    padding: 20px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
 .choices {
     border: 5px solid #403F3C;
     border-radius: 50%;
     padding: 20px;
     background: none;
-    margin: 0 30px
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+.choices:hover {
+    border: 5px solid #d0312d;
+    transition: all 0.3s ease;
 }
 
 .images {
@@ -83,11 +100,20 @@ button {
 }
 
 #reset-button {
-    margin-top: 80px;
+    margin-top: 60px;
     font-size: 20px;
     border: invisible;
     border-radius: 5px;
     background-color: #403F3C;
     color: white;
     padding: 5px;
+    cursor: pointer;
 }
+
+#reset-button:hover {
+    border: invisible;
+    background-color: #d0312d;
+    transition: 0.3s ease;
+}
+
+
