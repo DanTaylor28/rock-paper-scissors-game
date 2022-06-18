@@ -15,7 +15,7 @@
     </header>
 
     <div class="intro">
-        <p>Are you feeling lucky? <i class="fa-solid fa-clover"></i>  Make a choice to begin playing!</p>
+        <p>Are you feeling lucky? <i class="fa-solid fa-clover" id="clover"></i>  Make a choice to begin playing!</p>
     </div>
 
     <div class="score-area">
@@ -27,19 +27,19 @@
     </div>
 
     <div class="game-area">
-        <button id="rock-button" class="choices">
+        <button data-type="rock" id="rock-button" class="choices">
             <img src="assets/images/rock-img.png" alt="rock-image" id="rock-img" class="images">
         </button>
-        <button id="paper-button" class="choices">
+        <button data-type="paper" id="paper-button" class="choices">
             <img src="assets/images/paper-img.png" alt="paper-image" id="paper-img" class="images">
         </button>
-        <button id="scissors-button" class="choices">
+        <button data-type="scissors" id="scissors-button" class="choices">
             <img src="assets/images/scissors-img.png" alt="scissors-image" id="scissors-img" class="images">
         </button>
     </div>
 
     <div>
-        <button id="reset-button">Reset Scores</button>
+        <button data-type="reset" id="reset-button">Reset Scores</button>
     </div>
 
     <script src="https://kit.fontawesome.com/7009ec3e44.js" crossorigin="anonymous"></script>
