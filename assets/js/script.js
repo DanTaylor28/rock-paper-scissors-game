@@ -14,28 +14,36 @@
     const choices = ['rock', 'paper', 'scissors'];
 
 
-    // function Main() {
+    
+/**
+ * Function to generate a random computer
+ * choice from the choices array using Math.random
+ */
+    function getCompChoice() {
+        const randomNumber = Math.floor(Math.random() * 3);
+        return choices[randomNumber];
+    }
+    console.log(getCompChoice());
+
+    function runGame(yourChoice) {
+
+    }
+    
+    function Main() {
         rockButton.addEventListener('click', function() {
-            console.log('you clicked rock');
+            runGame('rock');
         })
         paperButton.addEventListener('click', function() {
-            console.log('you clicked paper');
+            runGame('paper');
         })
         scissorsButton.addEventListener('click', function() {
-            console.log('you clicked scissors');
+            runGame('scissors');
         })
         resetButton.addEventListener('click', function() {
-            console.log('you clicked reset');
+            runGame('reset');
         })
-    // }
-
-    function runGame() {
-
     }
 
-    function compChoice() {
-
-    }
 
     function increaseUserScore() {
 
@@ -49,7 +57,7 @@
 
     }
 
-
+Main();
 
 
    
