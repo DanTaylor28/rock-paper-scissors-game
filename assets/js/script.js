@@ -13,8 +13,6 @@
     const resetButton = document.getElementById('reset-button');
     const choices = ['rock', 'paper', 'scissors'];
 
-
-    
 /**
  * Function to generate a random computer
  * choice from the choices array using Math.random
@@ -23,13 +21,34 @@
         const randomNumber = Math.floor(Math.random() * 3);
         return choices[randomNumber];
     }
-    console.log(getCompChoice());
+
+/** 
+ * Switch statement to determine whether the user
+ * or computer wins each game
+*/
 
     function runGame(yourChoice) {
-
+        const compChoice = getCompChoice();
+        switch(yourChoice + compChoice) {
+            case 'rockrock':
+            case 'paperpaper':
+            case 'scissorsscissors':
+                alert('ITS A DRAW');
+                break;
+            case 'rockscissors':
+            case 'paperrock':
+            case 'scissorspaper':
+                alert('YOU WON!');
+                break;
+            case 'rockpaper':
+            case 'paperscissors':
+            case 'scissorsrock':
+                alert('YOU LOST!');
+                break;
+        }
     }
-    
-    function Main() {
+
+    function main() {
         rockButton.addEventListener('click', function() {
             runGame('rock');
         })
@@ -38,9 +57,6 @@
         })
         scissorsButton.addEventListener('click', function() {
             runGame('scissors');
-        })
-        resetButton.addEventListener('click', function() {
-            runGame('reset');
         })
     }
 
@@ -54,10 +70,12 @@
     }
 
     function resetGame() {
-
+        resetButton.addEventListener('click', function() {
+            runGame('reset');
+        })
     }
 
-Main();
+main();
 
 
    
