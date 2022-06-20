@@ -22,6 +22,18 @@
         return choices[randomNumber];
     }
 
+    function winGame() {
+        console.log('you win');
+    }
+
+    function loseGame() {
+        console.log('you lose');
+    }
+
+    function drawGame() {
+        console.log('you draw');
+    }
+
 /** 
  * Switch statement to determine whether the user
  * or computer wins each game
@@ -29,21 +41,22 @@
 
     function runGame(yourChoice) {
         const compChoice = getCompChoice();
+        console.log(`You played ${yourChoice} and your opponent played ${compChoice}`);
         switch(yourChoice + compChoice) {
             case 'rockrock':
             case 'paperpaper':
             case 'scissorsscissors':
-                alert('ITS A DRAW');
+                drawGame();
                 break;
             case 'rockscissors':
             case 'paperrock':
             case 'scissorspaper':
-                alert('YOU WON!');
+                winGame();
                 break;
             case 'rockpaper':
             case 'paperscissors':
             case 'scissorsrock':
-                alert('YOU LOST!');
+                loseGame();
                 break;
         }
     }
