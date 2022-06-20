@@ -5,8 +5,9 @@
  */
     let userScoreEl = document.getElementById('your-tally');
     let compScoreEl = document.getElementById('comp-tally');
-    const userScore = 0;
-    const compScore = 0;
+    let userScore = 0;
+    let compScore = 0;
+    let resultPara = document.getElementById('inner-text');
     const rockButton = document.getElementById('rock-button');
     const paperButton = document.getElementById('paper-button');
     const scissorsButton = document.getElementById('scissors-button');
@@ -22,16 +23,33 @@
         return choices[randomNumber];
     }
 
+/**
+ * This function increments the users score by 1 when 
+ * a game is won.
+ */
+
     function winGame() {
-        console.log('you win');
+        userScore++;
+        userScoreEl.innerHTML = userScore;
     }
+
+    /**
+ * This function increments the computers score by 1 when 
+ * a game is lost.
+ */
 
     function loseGame() {
-        console.log('you lose');
+        compScore++;
+        compScoreEl.innerHTML = compScore;
     }
 
-    function drawGame() {
-        console.log('you draw');
+/**
+ * This function changes the opening paragraph to display the game outcome  
+ * when its a draw, using a template literal.
+ */
+
+    function drawGame(yourChoice) {
+        resultPara.innerHTML = (`Both of you played ${yourChoice}!, ITS A DRAW!`);
     }
 
 /** 
@@ -46,17 +64,17 @@
             case 'rockrock':
             case 'paperpaper':
             case 'scissorsscissors':
-                drawGame();
+                drawGame(yourChoice, compChoice);
                 break;
             case 'rockscissors':
             case 'paperrock':
             case 'scissorspaper':
-                winGame();
+                winGame(yourChoice, compChoice);
                 break;
             case 'rockpaper':
             case 'paperscissors':
             case 'scissorsrock':
-                loseGame();
+                loseGame(yourChoice, compChoice);
                 break;
         }
     }
@@ -71,15 +89,6 @@
         scissorsButton.addEventListener('click', function() {
             runGame('scissors');
         })
-    }
-
-
-    function increaseUserScore() {
-
-    }
-
-    function increaseCompScore() {
-
     }
 
     function resetGame() {
