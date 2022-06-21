@@ -31,7 +31,15 @@
     function winGame(yourChoice, compChoice) {
         userScore++;
         userScoreEl.innerHTML = userScore;
-        resultPara.innerHTML = (`You played ${yourChoice} and your opponent played ${compChoice}, YOU WIN!!`);
+        if (userScore<10) {resultPara.innerHTML = (`You played ${yourChoice} 
+        and your opponent played ${compChoice}, YOU WIN!!`);
+        } else if (userScore === 10) {
+            resultPara.innerHTML = ('You won this game! Reset to play again :D');
+            rockButton.disabled = true;
+            paperButton.disabled = true;
+            scissorsButton.disabled = true;
+            resetGame();
+        }
     }
 
     /**
@@ -42,7 +50,15 @@
     function loseGame(yourChoice, compChoice) {
         compScore++;
         compScoreEl.innerHTML = compScore;
-        resultPara.innerHTML = (`You played ${yourChoice} and your opponent played ${compChoice}, YOU LOST THIS ONE...`);
+        if(compScore<10) {resultPara.innerHTML = (`You played ${yourChoice} and your opponent played ${compChoice}
+        , YOU LOST THIS ONE...`);
+        } else if (compScore === 10) {
+            resultPara.innerHTML = ('You lost this game! Reset to play again!');
+            rockButton.disabled = true;
+            paperButton.disabled = true;
+            scissorsButton.disabled = true;
+            resetGame();
+        }
     }
 
 /**
