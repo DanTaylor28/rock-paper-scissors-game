@@ -38,7 +38,6 @@
             rockButton.disabled = true;
             paperButton.disabled = true;
             scissorsButton.disabled = true;
-            resetGame();
         }
     }
 
@@ -57,7 +56,6 @@
             rockButton.disabled = true;
             paperButton.disabled = true;
             scissorsButton.disabled = true;
-            resetGame();
         }
     }
 
@@ -110,7 +108,14 @@
 
     function resetGame() {
         resetButton.addEventListener('click', function() {
-            console.log('you clicked reset');
+            userScore = 0;
+            compScore = 0;
+            userScoreEl.innerHTML = userScore;
+            compScoreEl.innerHTML = compScore;
+            resultPara.innerHTML = ('Ready to play again? Make your move!');
+            rockButton.disabled = false;
+            paperButton.disabled = false;
+            scissorsButton.disabled = false;
         })
     }
 
