@@ -34,10 +34,6 @@ button {
     color: white;
 }
 
-#clover {
-    color: green;
-}
-
 /* Score area styling */
 
 .score-area {
@@ -114,6 +110,14 @@ button {
 #reset-button:hover {
     background-color: #d0312d;
     transition: 0.3s ease;
+}
+
+.green-text {
+    color: #00ff00;
+}
+
+.red-text {
+    color: #ff0000;
 }
 
 

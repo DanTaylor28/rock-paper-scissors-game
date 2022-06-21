@@ -38,6 +38,9 @@
             paperButton.disabled = true;
             scissorsButton.disabled = true;
         }
+        // Adds a style class to the resultPara to turn the text green for .6 seconds after each win
+        resultPara.classList.add('green-text');
+        setTimeout(function() {resultPara.classList.remove('green-text')}, 600);
     }
 
     /**
@@ -47,7 +50,7 @@
     function loseGame(yourChoice, compChoice) {
         compScore++;
         compScoreEl.innerHTML = compScore;
-        if(compScore<10) {resultPara.innerHTML = (`Computer Played ${compChoice}! You Lost..`);
+        if(compScore<10) {resultPara.innerHTML = (`Opponent Played ${compChoice}! You Lost..`);
         // Ends the game when computer scores 10 points and disables play buttons
         } else if (compScore === 10) {
             resultPara.innerHTML = ('Aww You Lost This Game.. Reset To Play Again!');
@@ -55,6 +58,9 @@
             paperButton.disabled = true;
             scissorsButton.disabled = true;
         }
+        // Adds a style class to the resultPara to turn the text red for .6 seconds after each loss
+        resultPara.classList.add('red-text');
+        setTimeout(function() {resultPara.classList.remove('red-text')}, 600);
     }
 
 /**
