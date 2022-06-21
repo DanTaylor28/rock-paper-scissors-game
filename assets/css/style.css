@@ -25,13 +25,13 @@ button {
 }
 
 .intro {
+    text-transform: capitalize;
     font-size: inherit;
     margin: 50px auto;
-    border: invisible;
     width: 1000px;
     padding: 20px;
-    background-color: #ede9e7;
-    color: #403F3C;
+    background-color: #403F3C;
+    color: white;
 }
 
 #clover {
@@ -49,7 +49,6 @@ button {
 #your-score {
     position: relative;
     right: 48%;
-    border: invisible;
     border-radius: 5px;
     background-color: #403F3C;
     color: white;
@@ -59,7 +58,6 @@ button {
 #comp-score {
     position: relative;
     left: 65%;
-    border: invisible;
     border-radius: 5px;
     background-color: #403F3C;
     color: white;
@@ -67,7 +65,6 @@ button {
 }
 
 #score-tally {
-    border: invisible;
     background-color: #d0312d;
     color: white;
     border-radius: 5px;
@@ -78,7 +75,7 @@ button {
 /* Game area styling */
 
 .game-area {
-    background-color: #ede9e7;
+    background-color: #ededed;
     padding: 20px;
     width: 800px;
     margin: 0 auto;
@@ -91,6 +88,7 @@ button {
     background: none;
     margin: 0 30px;
     cursor: pointer;
+    background-color: white;
 }
 
 .choices:hover {
@@ -106,7 +104,6 @@ button {
 #reset-button {
     margin-top: 60px;
     font-size: 20px;
-    border: invisible;
     border-radius: 5px;
     background-color: #403F3C;
     color: white;
@@ -115,7 +112,6 @@ button {
 }
 
 #reset-button:hover {
-    border: invisible;
     background-color: #d0312d;
     transition: 0.3s ease;
 }
