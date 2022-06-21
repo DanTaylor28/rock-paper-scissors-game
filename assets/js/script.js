@@ -25,22 +25,24 @@
 
 /**
  * This function increments the users score by 1 when 
- * a game is won.
+ * a game is won, and shows the results in the DOM.
  */
 
-    function winGame() {
+    function winGame(yourChoice, compChoice) {
         userScore++;
         userScoreEl.innerHTML = userScore;
+        resultPara.innerHTML = (`You played ${yourChoice} and your opponent played ${compChoice}, YOU WIN!!`);
     }
 
     /**
  * This function increments the computers score by 1 when 
- * a game is lost.
+ * a game is lost, and shows the results in the DOM.
  */
 
-    function loseGame() {
+    function loseGame(yourChoice, compChoice) {
         compScore++;
         compScoreEl.innerHTML = compScore;
+        resultPara.innerHTML = (`You played ${yourChoice} and your opponent played ${compChoice}, YOU LOST THIS ONE...`);
     }
 
 /**
@@ -54,12 +56,11 @@
 
 /** 
  * Switch statement to determine whether the user
- * or computer wins each game
+ * or computer wins, or if its a tie game.
 */
 
     function runGame(yourChoice) {
         const compChoice = getCompChoice();
-        console.log(`You played ${yourChoice} and your opponent played ${compChoice}`);
         switch(yourChoice + compChoice) {
             case 'rockrock':
             case 'paperpaper':
@@ -93,11 +94,15 @@
 
     function resetGame() {
         resetButton.addEventListener('click', function() {
-            runGame('reset');
+            console.log('you clicked reset');
         })
     }
 
+    
+
+
 main();
+resetGame();
 
 
    
