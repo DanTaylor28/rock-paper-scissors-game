@@ -28,14 +28,13 @@ button {
     text-transform: capitalize;
     font-size: inherit;
     margin: 50px auto;
-    width: 1000px;
+    width: 800px;
     padding: 20px;
-    background-color: #403F3C;
-    color: white;
+    background-color: #ededed;
+    color: #403F3C;
 }
 
 /* Score area styling */
-
 .score-area {
     width: 400px;
     margin: 50px auto;
@@ -69,7 +68,6 @@ button {
 }
 
 /* Game area styling */
-
 .game-area {
     background-color: #ededed;
     padding: 20px;
@@ -113,7 +111,7 @@ button {
 }
 
 .green-text {
-    color: #00ff00;
+    color: #32CD32;
 }
 
 .red-text {
@@ -122,7 +120,6 @@ button {
 
 /* Media queries */
 /* For medium screen sizes 1100px max width */
-
 @media screen and (max-width: 1100px) {
 
 .intro {
@@ -135,7 +132,6 @@ button {
 }
 
 /* For small screen sizes 700px max width */
-
 @media screen and (max-width: 700px) {
 
     #your-score {
@@ -150,7 +146,7 @@ button {
     #score-tally {
         position: absolute;
         top: 42%;
-        left: 35%;
+        left: 34%;
 
     }
     
@@ -161,7 +157,6 @@ button {
 }
 
 /* For small mobile screen sizes 380px max-width */
-
 @media screen and (max-width: 380px) {
     
 #score-tally {
