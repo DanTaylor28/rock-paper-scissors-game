@@ -30,7 +30,7 @@
     function winGame(yourChoice, compChoice) {
         userScore++;
         userScoreEl.innerHTML = userScore;
-        if (userScore<10) {resultPara.innerHTML = (`${yourChoice} Beats ${compChoice}! You Won :D`);
+        if (userScore<10) {resultPara.innerHTML = (`${yourChoice} Beats ${compChoice}! You Win :D`);
         // Ends the game when user scores 10 points and disables play buttons
         } else if (userScore === 10) {
             resultPara.innerHTML = ('Congrats You Won! Reset To Play Again :D');
@@ -50,7 +50,7 @@
     function loseGame(yourChoice, compChoice) {
         compScore++;
         compScoreEl.innerHTML = compScore;
-        if(compScore<10) {resultPara.innerHTML = (`Opponent Played ${compChoice}! You Lost..`);
+        if(compScore<10) {resultPara.innerHTML = (`Opponent Played ${compChoice}! You Lose..`);
         // Ends the game when computer scores 10 points and disables play buttons
         } else if (compScore === 10) {
             resultPara.innerHTML = ('Aww You Lost This Game.. Reset To Play Again!');

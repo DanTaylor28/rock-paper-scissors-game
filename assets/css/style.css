@@ -120,4 +120,57 @@ button {
     color: #ff0000;
 }
 
+/* Media queries */
+/* For medium screen sizes 1100px max width */
+
+@media screen and (max-width: 1100px) {
+
+.intro {
+    width: 100%;
+}
+
+.game-area {
+    width: 100%;
+}
+}
+
+/* For small screen sizes 700px max width */
+
+@media screen and (max-width: 700px) {
+
+    #your-score {
+        position: absolute;
+        right: 70%;
+    }
+
+    #comp-score {
+        position: absolute;
+    }
+
+    #score-tally {
+        position: absolute;
+        top: 42%;
+        left: 35%;
+
+    }
+    
+    .game-area {
+        width: 75%;
+        margin-top: 100px;
+    }
+}
+
+/* For small mobile screen sizes 380px max-width */
+
+@media screen and (max-width: 380px) {
+    
+#score-tally {
+        top: 55%;
+        left: 33%;
+    }
+}
+
+
+
+
 
