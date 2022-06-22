@@ -1,108 +1,117 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Rock, Paper Scissors Game
+AM I RESPONSIVE IMAGE HERE
 
-Welcome DanTaylor28,
+My game is the universally known roock, paper scissors game. It gives users three different choices to choose from before the computer plays their option and the winner is determined. The goal of the site is to provide a fun, interactive game of chance for users to enjoy whenever they the mood strikes.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The game is aimed at adults and children alike, the rules are simple with an intuitive, easy to follow layout that updates the scoreboard after each turn. Once 10 points are reached by either the user or the computer, the game ends with one winner and you then have the option to restart the game and play again!
+* * * 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Current Features
 
-## Gitpod Reminders
+### The Header
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- The header holds the title of the webpage. Its big and bold and aims to grab the users attention from the onset, it also contains a font awesome icon relating to the game.
 
-`python3 -m http.server`
+- The title outlines the name of the game which will show any user visiting the site exactly what its purpose is and what content they can expect to come across!
 
-A blue button should appear to click: _Make Public_,
+![page-title](/assets/images/title-screenshot.png)
 
-Another blue button should appear to click: _Open Browser_.
+### Introductory Text
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- On opening of the webpage, this text gives you an immediate, brief explanation on the rules of the game and how to get started playing. It outlines that its first to 10 points to win the game.
 
-A blue button should appear to click: _Make Public_,
+- This text is also valuable as it explains that you click a choice to begin playing. This will save the user time in wondering how to begin playing.
 
-Another blue button should appear to click: _Open Browser_.
+![intro-text](/assets/images/intro-text-screenshot.png)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Results Paragraph
 
-To log into the Heroku toolbelt CLI:
+- The results after each go replace the introductory text explained above by using .innerHTML and template literals within javascript. It shows to the user whether you have won, drawn or lost your most recent go.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- After each click on a button the user makes, it updates offering you congratulations on a won round or informing you of a loss and what option the computer played to beat you. Along with that, the text flashes either green or red for .6 seconds to indicate a won or lost round as well as to draw the users attention to the text.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- The aim of this paragraph is to keep the user updated on how well the game is going and to also give you that much needed motivation to keep pushing to win! When either the user or computer has reached 10 points, it shows a message to tell you the game has come to an end and how to restart if you would like to continue playing.
 
-------
+![win-result](/assets/images/win-screenshot.png)
+![draw-result](/assets/images/draw-screenshot.png)
+![lose-result](/assets/images/lose-screenshot.png)
 
-## Release History
+### Score Board
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- This is a clear interactive scoreboard showing the users result next to the computers, seperated by a colon with two seperate text boxes indicating which score belongs to who. This is valuable to the user because it keeps you informed on the results and updates after each round to continuously monitor your progress.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- The scores continue updating until 10 points are reached by either the user or computer. The aim of ending the game at 10 points is to make each game short and sweet. It also keeps the users interest versus a game with unlimited points which would most likely result in the user getting bored and leaving the website much quicker.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![scoreboard](/assets/images/scoreboard-screenshot.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Game Area
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- This is the interactive game area of the site. It contains the three buttons that the user gets to choose from - rock, paper or scissors. The buttons are styled with an image to make it as easy as possible to show what each of them represent.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- When one of the buttons is clicked by the user, this triggers the game to begin. The computer then makes it random choice the result of the first round is passed to the result paragraph with the current score displayed.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![game-area](/assets/images/game-area-screenshot.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Reset Button 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- This button positioned at the bottom of the page is there to allow the user to restart the game at any point they may want to. Once the game concludes at 10 points, the play buttons are disabled. Clicking this button re-enables the ability to interact with the play buttons while also resetting the scoreboard to show 0:0.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+![reset-button](/assets/images/reset-screenshot.png)
+* * * 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Additional Features To Implement 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Username Input 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- I feel this would add an extra level of interactivity within the game and the potential to introduce a leaderboard of different peoples scores could then become another future implementation.
+ * * *
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Testing
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- I have tested and confirmed that the website works on the following browsers: Chrome, Safari and Firefox.
 
-------
+- I have ensured that the game is responsive and works well on various different screen sizes. I have tested these in the development devices tools bar.
 
-## FAQ about the uptime script
+- I have played the game dozens of times ensuring that the scoring is correct. Iv also confirmed that the results paragraph is always displaying the correct information and that the green text corresponded to a win and the red to a loss.
 
-**Why have you added this script?**
+- Throughout coding the javascript, I have been console.logging at every opportunity to ensure the code is working as expected before writing more indepth code and realsing later that something is broken when it would be a much harder bug to fix. 
+* * *
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Validator Testing 
 
-**How will this affect me?**
+- All HTML code passed through the HTML W3C validator with no issues.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- All CSS passed through the CSS Jigsaw validator with no issues.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- All Javascript passes through JSHint with no issues.
+When i first ran the code, it showed me warnings about version ES6. This issue was resolved by adding /*jshint esversion: 6*/ to the code.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![lighthouse-results](/assets/images/lighthouse-results.png)
+* * * 
 
-**So….?**
+## Unfixed Bugs
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- On some mobile screen sizes, the score tally shifts slightly on the page after a choice is made by the user. Im not sure whether this was caused by the positioning of the span or a bug in the javascript. I intend to investigate this further but unfortunately not in time for my submission date.
+* * *
 
-**Can I opt out?**
+## Deployment 
+* * *
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+# Credits
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Content 
 
-**Anything more?**
+- I used w3schools.com to refresh my knowledge and use of switch statements and to find out how to use the disabled property.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- The code i used to add and remove classList to change the text color of the result paragraph was taken from a thread on stackoverflow.com - https://stackoverflow.com/questions/507138/how-to-add-a-class-to-a-given-element
 
----
+- The icon in my title and the favicon are from fontawesome.com.
 
-Happy coding!
+- The images used in my buttons were taken from icons8.com.
+
+
+
+
+
+
+
